@@ -12,6 +12,17 @@ pipeline{
                                     sh 'cd spring-petclinic-angular/static-content && curl https://jcenter.bintray.com/com/athaydes/rawhttp/rawhttp-cli/1.0/rawhttp-cli-1.0-all.jar -o rawhttp.jar && nohup java -jar ./rawhttp.jar serve . -p 4200 &'
                               }
                 }
+		stage('Postman') {
+                            steps {
+                                sleep(30)
+                                sh 'newman run Postman/PetClinic_05_collection.json --environment Postman/PetClinic_05_environment.json --reporters junit'
+                                // sh 'newman run Postman/PetClinic_visit_collection.json --environment Postman/PetClinic_visit_environment.json --reporters junit'
+                            }
+                            post {
+                                	always {
+                                		junit '**/*xml'
+                                	}
+                            }
 		stage('Robot Framework') {
                               steps {
                                     sleep(10)
@@ -39,17 +50,7 @@ pipeline{
                                     }
                               }
                               }
-                stage('Postman') {
-                            steps {
-                                sleep(30)
-                                sh 'newman run Postman/PetClinic_05_collection.json --environment Postman/PetClinic_05_environment.json --reporters junit'
-                                // sh 'newman run Postman/PetClinic_visit_collection.json --environment Postman/PetClinic_visit_environment.json --reporters junit'
-                            }
-                            post {
-                                	always {
-                                		junit '**/*xml'
-                                	}
-                            }
+                
 
                 }
 	
