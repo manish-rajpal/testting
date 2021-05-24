@@ -1,90 +1,32 @@
 pipeline{
     agent any
-    stages{
-        stage('para'){
-            parallel{
-                 stage('APIServer'){
-                            steps{
-
+        stages{
+           stage('Build and Run the Server--API Rest'){
+                         steps{
                                 sh 'cd spring-petclinic-rest && nohup mvn spring-boot:run &'
-				    sleep(10)
                             }
                 }
-                 stage('angular'){
+		stage('Run the Frontend--Angular'){
                               steps{
-                                    
-                                    sh 'cd spring-petclinic-angular/static-content && curl https://jcenter.bintray.com/com/athaydes/rawhttp/rawhttp-cli/1.0/rawhttp-cli-1.0-all.jar -o rawhttp.jar && nohup java -jar ./rawhttp.jar serve . -p 4200 &'
-                              		sleep(10)
-			      }
-                }
-				
-				
-				stage('Newman') {
-						steps {
-							script {
-                    						try {
-                        						sleep(10)
-									sh 'newman run  /Postman/PetClinic_05_collection.json --environment /Postman/PetClinic_05_environment.json --reporters junit'
-								}
-								catch (Exception e) {
-                        							echo "Tests are failing, continue pipeline..."
-                    								     }
-                						}
-							}
-						post {
-							always {
-									junit '***/*xml'
-								}
-							}
-
-					}
-			   	stage('Robot Framework') {
-                              steps {
                                     sleep(10)
-                                    sh 'robot --variable BROWSER:headlesschrome -d RobotFrameWork/Results RobotFrameWork/Tests'
-                              }
-                              post {
-                                    always {
-                                           script {
-                                                  step(
-                                                       [
-                                                             $class              : 'RobotPublisher',
-                                                              outputPath          : 'RobotFrameWork/Results',
-                                                              outputFileName      : '**/output.xml',
-                                                              reportFileName      : '**/report.html',
-                                                              logFileName         : '**/log.html',
-                                                              disableArchiveOutput: false,
-                                                              passThreshold       : 50,
-                                                              unstableThreshold   : 40,
-                                                              otherFiles          : "**/*.png,**/*.jpg",
-                                                       ]
-                                                  )
-                                           }
-                                    }
+                                    sh 'cd spring-petclinic-angular/static-content && curl https://jcenter.bintray.com/com/athaydes/rawhttp/rawhttp-cli/1.0/rawhttp-cli-1.0-all.jar -o rawhttp.jar && nohup java -jar ./rawhttp.jar serve . -p 4200 &'
                               }
                 }
-            }
-       }
+                stage('Postman') {
+                            steps {
+                                sleep(30)
+                                sh 'newman run Postman/PetClinic_05_collection.json --environment Postman/PetClinic_05_environment.json --reporters junit'
+                                sh 'newman run Postman/PetClinic_visit_collection.json --environment Postman/PetClinic_visit_environment.json --reporters junit'
+                            }
+                            post {
+                                	always {
+                                		junit '**/*xml'
+                                	}
+                            }
+
+                }
+	
     }
-	post {
-        failure {
-            script {
-                mail (to: 'manish.rajpal@iths.se',
-                        subject: "Job '${env.JOB_NAME}' (${env.BUILD_NUMBER}) failed",
-                        body: "Please visit ${env.BUILD_URL} for further information"
-                );
-                }
-            }
-         success {
-             script {
-                mail (to: 'manish.rajpal@iths.se',
-                        subject: "Job '${env.JOB_NAME}' (${env.BUILD_NUMBER}) success.",
-                        body: "Please visit ${env.BUILD_URL} for further information.",
-
-
-                  );
-                }
-          }
 }
-}
+
 
