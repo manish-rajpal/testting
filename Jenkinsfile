@@ -22,7 +22,7 @@ pipeline{
 							script {
                     						try {
                         						sleep(40)
-									sh 'newman run  /Postman/PetClinic_05_collection.json --environment PetClinic_05_environment.json --reporters junit'
+									sh 'newman run  /Postman/PetClinic_05_collection.json --environment /Postman/PetClinic_05_environment.json --reporters junit'
 								}
 								catch (Exception e) {
                         							echo "Tests are failing, continue pipeline..."
