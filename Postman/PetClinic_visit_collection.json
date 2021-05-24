@@ -1,0 +1,375 @@
+{
+	"info": {
+		"_postman_id": "255b0cd0-0c33-40d2-8982-52c30f42b746",
+		"name": "PetClinicCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "AuthLogin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var status_code = 201;\r",
+									"pm.test(\"Test 1:Status check Page response is  201 \", () => {   pm.expect(pm.response.code).to.eql(status_code); });\r",
+									"\r",
+									"\r",
+									"//pm.test(\"Status code is 201\", function () {   pm.response.to.have.status(201); });\r",
+									"\r",
+									"\r",
+									"pm.test(\"Test2 :Response time is less than 500ms\", function () {\r",
+									"        pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"    });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"enabled\": true,\r\n  \"password\": \"string\",\r\n  \"roles\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"username\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{petclinicUrl}}api/users",
+							"host": [
+								"{{petclinicUrl}}api"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Visits",
+			"item": [
+				{
+					"name": "getAllVisits",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var status_code = 200;\r",
+									"\r",
+									"pm.test(\"Test 1. Page return status 200 \", () => {   pm.expect(pm.response.code).to.eql(status_code); });\r",
+									"\r",
+									"pm.test(\"Test 2 :Response time is less than 500ms\", function () {\r",
+									"        pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"    });\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"console.log(response);\r",
+									"console.log(response.length);\r",
+									"console.log(response['response.length']);\r",
+									"\r",
+									"pm.test(\"Test3 : Total No of Entries Displayed  : \" +response.length , function () {\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.expect(jsonData.length).to.eql(response.length);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{petclinicUrl}}api/visits",
+							"host": [
+								"{{petclinicUrl}}api"
+							],
+							"path": [
+								"visits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addVisit",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var status_code = 201;\r",
+									"\r",
+									"pm.test(\"Test 1. Page return status 201 \", () => {   pm.expect(pm.response.code).to.eql(status_code); });\r",
+									"\r",
+									"pm.test(\"Test 2 :Response time is less than 500ms\", function () {\r",
+									"        pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"    });\r",
+									"pm.environment.set(\"visitId\", pm.response.json().id);\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"\r",
+									"\r",
+									"pm.test(\"Test 3: Date updated as provided \", function () {\r",
+									"    pm.expect(jsonData.date).to.eql(pm.variables.get(\"visitdate\"));\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Test 4:Description as provided \", function () {\r",
+									"    pm.expect(jsonData.description).to.eql(pm.variables.get(\"Description\"));\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Test5 : Total No of Entries Displayed  : \" +jsonData.length , function () {\r",
+									"pm.expect(jsonData.length).to.eql(pm.response.length);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\":0,\r\n        \"date\": \"2013/01/02\",\r\n        \"description\": \"rabies shot\\n\",\r\n        \"pet\": {\r\n            \"id\": 8,\r\n            \"name\": \"Max\",\r\n            \"birthDate\": \"2012/09/04\",\r\n            \"type\": {\r\n                \"id\": 1,\r\n                \"name\": \"insect\"\r\n            },\r\n            \"owner\": {\r\n                \"id\": 6,\r\n                \"firstName\": \"Jean\",\r\n                \"lastName\": \"Coleman\",\r\n                \"address\": \"105 N. Lake St.\",\r\n                \"city\": \"Monona\",\r\n                \"telephone\": \"6085552654\"\r\n            }\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{petclinicUrl}}api/visits",
+							"host": [
+								"{{petclinicUrl}}api"
+							],
+							"path": [
+								"visits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllVisitsById",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var status_code = 200;\r",
+									"\r",
+									"pm.test(\"Test 1. Page return status 200 \", () => {   pm.expect(pm.response.code).to.eql(status_code); });\r",
+									"\r",
+									"pm.test(\"Test 2 :Response time is less than 500ms\", function () {\r",
+									"        pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"    });\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"console.log(response);\r",
+									"console.log(response.length);\r",
+									"console.log(response['response.length']);\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Test 3:Verify that the Petvisit date is not empty\", function () {\r",
+									"    pm.expect(jsonData.date).to.not.eql(\"\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Test 4:Verify that the Petvisit description is not empty\", function () {\r",
+									"    pm.expect(jsonData.description).to.not.eql(\"\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Test5 : Total No of Entries Displayed  : \" +response.length , function () {\r",
+									"\r",
+									"pm.expect(jsonData.length).to.eql(response.length);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{petclinicUrl}}api/visits/{{visitId}}",
+							"host": [
+								"{{petclinicUrl}}api"
+							],
+							"path": [
+								"visits",
+								"{{visitId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateVisit",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var status_code = 204;\r",
+									"pm.test(\"Test 1:Status check Page response is  201 \", () => {   pm.expect(pm.response.code).to.eql(status_code); });\r",
+									" \r",
+									"pm.test(\"Test2 :Response time is less than 500ms\", function () { pm.expect(pm.response.responseTime).to.be.below(500); });\r",
+									" \r",
+									"var url = pm.environment.get(\"petclinicUrl\") + \"api/visits/\" +  parseInt(pm.environment.get(\"visitid\"));\r",
+									"\r",
+									"const getRequest = {\r",
+									"        url: url,\r",
+									"        method: 'GET' };\r",
+									" \r",
+									"pm.sendRequest(getRequest, function (err, res) {\r",
+									"    if (err) { \r",
+									"        console.log(err); }\r",
+									"    console.log(res.firstName);\r",
+									" \r",
+									"    pm.test(\"Test 3: Verify that the json data is not empty\", function () { pm.expect(res).to.not.eql(\"\"); });\r",
+									" \r",
+									" var jsonData = res.json();\r",
+									"\r",
+									"    pm.test(\"Test 4 :Check Pettype is Added is Correct\", function () {\r",
+									"    pm.expect(jsonData.name).to.eql(pm.variables.get(\"{{updatePetType}}\"))\r",
+									"    });\r",
+									"    \r",
+									"});\r",
+									" "
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"id\": 2,\r\n        \"date\": \"2013/01/01\",\r\n        \"description\": \"Delivary\",\r\n        \"pet\": {\r\n            \"id\": 8,\r\n            \"name\": \"Max\",\r\n            \"birthDate\": \"2012/09/04\",\r\n            \"type\": {\r\n                \"id\": 1,\r\n                \"name\": \"cat\"\r\n            },\r\n            \"owner\": {\r\n                \"id\": 6,\r\n                \"firstName\": \"Jean\",\r\n                \"lastName\": \"Coleman\",\r\n                \"address\": \"105 N. Lake St.\",\r\n                \"city\": \"Monona\",\r\n                \"telephone\": \"6085552654\"\r\n            }\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{petclinicUrl}}api/visits/{{visitId}}",
+							"host": [
+								"{{petclinicUrl}}api"
+							],
+							"path": [
+								"visits",
+								"{{visitId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Visit",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Test1 :Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									"\r",
+									"var url = pm.environment.get(\"petclinicUrl\") + \"api/visits/\" +  parseInt(pm.environment.get(\"visitId\"));\r",
+									"\r",
+									"const getRequest = {\r",
+									"        url: url,\r",
+									"        method: 'GET'\r",
+									"};\r",
+									"pm.sendRequest(getRequest, function (err, res) {\r",
+									"    if (err) { \r",
+									"        console.log(err);\r",
+									"    }\r",
+									"     console.log(res);\r",
+									"    \r",
+									"    pm.test('Test 2 :Response should be Not Found', function () {\r",
+									"        pm.expect(res.status).to.include(\"Not Found\");\r",
+									"    });\r",
+									"    \r",
+									"    pm.test(\"Test 3:Response code 404\", function() {\r",
+									"        pm.expect(res.code).to.equal(404);\r",
+									"    })\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "name={{admin_name}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{petclinicUrl}}api/visits/{{visitId}}",
+							"host": [
+								"{{petclinicUrl}}api"
+							],
+							"path": [
+								"visits",
+								"{{visitId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

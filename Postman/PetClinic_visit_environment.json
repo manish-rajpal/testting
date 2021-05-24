@@ -1,0 +1,34 @@
+{
+	"id": "2f196beb-27e6-4105-9aea-eb5e8872d7c6",
+	"name": "PetClinic",
+	"values": [
+		{
+			"key": "BaseUrl",
+			"value": "http://localhost:9966/api/",
+			"enabled": true
+		},
+		{
+			"key": "petclinicUrl",
+			"value": "http://localhost:9966/petclinic/",
+			"enabled": true
+		},
+		{
+			"key": "visitId",
+			"value": "2",
+			"enabled": true
+		},
+		{
+			"key": "visitdate",
+			"value": "2013/01/02",
+			"enabled": true
+		},
+		{
+			"key": "Description",
+			"value": "rabies shot\n",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2021-05-10T11:07:19.725Z",
+	"_postman_exported_using": "Postman/8.3.1"
+}

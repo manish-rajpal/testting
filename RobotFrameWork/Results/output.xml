@@ -1,0 +1,2242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.7.4 on win32)" generated="20210426 13:00:04.425" rpa="false">
+<suite id="s1" name="Veterinarians" source="C:\Users\HC\PycharmProjects\Project_PetClinic\Tests\Veterinarians.robot">
+<test id="s1-t1" name="User Can Access The Web">
+<kw name="Generate Tests" library="Keywords_Vet" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:04.796" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210426 13:00:04.795" endtime="20210426 13:00:06.260"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:04.795" endtime="20210426 13:00:06.261"></status>
+</kw>
+<kw name="Go To Web" library="Keywords_Vet">
+<kw name="Load Web" library="Keywords_Vet">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:06.262" level="INFO">Opening url 'http://localhost:4200'</msg>
+<status status="PASS" starttime="20210426 13:00:06.262" endtime="20210426 13:00:08.431"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:06.261" endtime="20210426 13:00:08.431"></status>
+</kw>
+<kw name="Verify Page Loaded" library="Keywords_Vet">
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${GET_TITLE}</var>
+</assign>
+<msg timestamp="20210426 13:00:08.441" level="INFO">${GET_TITLE} = SpringPetclinicAngular</msg>
+<status status="PASS" starttime="20210426 13:00:08.432" endtime="20210426 13:00:08.441"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${GET_TITLE}</arg>
+<arg>SpringPetclinicAngular</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:08.441" endtime="20210426 13:00:08.442"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Welcome to Petclinic</arg>
+</arguments>
+<msg timestamp="20210426 13:00:08.464" level="INFO">Current page contains text 'Welcome to Petclinic'.</msg>
+<status status="PASS" starttime="20210426 13:00:08.443" endtime="20210426 13:00:08.464"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:08.431" endtime="20210426 13:00:08.465"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:06.261" endtime="20210426 13:00:08.465"></status>
+</kw>
+<kw name="End the test" library="Keywords_Vet" type="teardown">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@title="home page"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:08.467" level="INFO">Clicking link '//*[@title="home page"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:08.467" endtime="20210426 13:00:08.540"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Welcome to Petclinic</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:08.540" endtime="20210426 13:00:08.548"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210426 13:00:08.548" endtime="20210426 13:00:10.928"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:08.466" endtime="20210426 13:00:10.929"></status>
+</kw>
+<doc>Web users can access the web</doc>
+<tags>
+<tag>access</tag>
+</tags>
+<status status="PASS" starttime="20210426 13:00:04.794" endtime="20210426 13:00:10.930" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Verify Veterinarians Access">
+<kw name="Generate Tests" library="Keywords_Vet" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:10.942" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210426 13:00:10.940" endtime="20210426 13:00:12.212"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:10.938" endtime="20210426 13:00:12.212"></status>
+</kw>
+<kw name="Go To Web" library="Keywords_Vet">
+<kw name="Load Web" library="Keywords_Vet">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:12.215" level="INFO">Opening url 'http://localhost:4200'</msg>
+<status status="PASS" starttime="20210426 13:00:12.215" endtime="20210426 13:00:14.495"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:12.214" endtime="20210426 13:00:14.496"></status>
+</kw>
+<kw name="Verify Page Loaded" library="Keywords_Vet">
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${GET_TITLE}</var>
+</assign>
+<msg timestamp="20210426 13:00:14.502" level="INFO">${GET_TITLE} = SpringPetclinicAngular</msg>
+<status status="PASS" starttime="20210426 13:00:14.496" endtime="20210426 13:00:14.502"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${GET_TITLE}</arg>
+<arg>SpringPetclinicAngular</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:14.503" endtime="20210426 13:00:14.503"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Welcome to Petclinic</arg>
+</arguments>
+<msg timestamp="20210426 13:00:14.519" level="INFO">Current page contains text 'Welcome to Petclinic'.</msg>
+<status status="PASS" starttime="20210426 13:00:14.503" endtime="20210426 13:00:14.519"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:14.496" endtime="20210426 13:00:14.519"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:12.213" endtime="20210426 13:00:14.519"></status>
+</kw>
+<kw name="Click Veterinarians" library="Keywords_Vet">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:14.532" level="INFO">Current page contains element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]'.</msg>
+<status status="PASS" starttime="20210426 13:00:14.520" endtime="20210426 13:00:14.533"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:14.533" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]'.</msg>
+<status status="PASS" starttime="20210426 13:00:14.533" endtime="20210426 13:00:14.586"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:14.520" endtime="20210426 13:00:14.587"></status>
+</kw>
+<kw name="End the test" library="Keywords_Vet" type="teardown">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@title="home page"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:14.588" level="INFO">Clicking link '//*[@title="home page"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:14.588" endtime="20210426 13:00:14.653"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Welcome to Petclinic</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:14.653" endtime="20210426 13:00:14.661"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210426 13:00:14.662" endtime="20210426 13:00:16.843"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:14.587" endtime="20210426 13:00:16.843"></status>
+</kw>
+<doc>users can access the Veterinarians to query and add pets</doc>
+<tags>
+<tag>veterinarians</tag>
+</tags>
+<status status="PASS" starttime="20210426 13:00:10.933" endtime="20210426 13:00:16.844" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Add Vets From All Qurey">
+<kw name="Generate Tests" library="Keywords_Vet" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:16.851" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210426 13:00:16.850" endtime="20210426 13:00:18.110"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:16.848" endtime="20210426 13:00:18.110"></status>
+</kw>
+<kw name="Go To Web" library="Keywords_Vet">
+<kw name="Load Web" library="Keywords_Vet">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:18.113" level="INFO">Opening url 'http://localhost:4200'</msg>
+<status status="PASS" starttime="20210426 13:00:18.112" endtime="20210426 13:00:20.107"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:18.111" endtime="20210426 13:00:20.108"></status>
+</kw>
+<kw name="Verify Page Loaded" library="Keywords_Vet">
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${GET_TITLE}</var>
+</assign>
+<msg timestamp="20210426 13:00:20.116" level="INFO">${GET_TITLE} = SpringPetclinicAngular</msg>
+<status status="PASS" starttime="20210426 13:00:20.109" endtime="20210426 13:00:20.116"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${GET_TITLE}</arg>
+<arg>SpringPetclinicAngular</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:20.117" endtime="20210426 13:00:20.117"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Welcome to Petclinic</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.141" level="INFO">Current page contains text 'Welcome to Petclinic'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.118" endtime="20210426 13:00:20.141"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:20.108" endtime="20210426 13:00:20.141"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:18.111" endtime="20210426 13:00:20.141"></status>
+</kw>
+<kw name="Click Veterinarians" library="Keywords_Vet">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.156" level="INFO">Current page contains element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.142" endtime="20210426 13:00:20.157"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.157" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.157" endtime="20210426 13:00:20.218"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:20.141" endtime="20210426 13:00:20.218"></status>
+</kw>
+<kw name="All Query" library="Keywords_Vet">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//*[@routerlink="/vets"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.232" level="INFO">Current page contains element '//*[@routerlink="/vets"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.219" endtime="20210426 13:00:20.233"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@routerlink="/vets"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.233" level="INFO">Clicking element '//*[@routerlink="/vets"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.233" endtime="20210426 13:00:20.296"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Veterinarians</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.323" level="INFO">Current page contains text 'Veterinarians'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.297" endtime="20210426 13:00:20.323"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//*[@id="vets"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.336" level="INFO">Current page contains element '//*[@id="vets"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.324" endtime="20210426 13:00:20.336"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/thead/tr/th[1]</arg>
+<arg>Name</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.337" level="INFO">Verifying element '//*[@id="vets"]/thead/tr/th[1]' contains exact text 'Name'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.336" endtime="20210426 13:00:20.365"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/thead/tr/th[2]</arg>
+<arg>Specialties</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.365" level="INFO">Verifying element '//*[@id="vets"]/thead/tr/th[2]' contains exact text 'Specialties'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.365" endtime="20210426 13:00:20.392"></status>
+</kw>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.427" level="INFO">Current page contains button 'xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.393" endtime="20210426 13:00:20.427"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]</arg>
+<arg>Home</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.427" level="INFO">Verifying element 'xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]' contains exact text 'Home'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.427" endtime="20210426 13:00:20.452"></status>
+</kw>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath://*[contains(text(),"Add Vet")]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.484" level="INFO">Current page contains button 'xpath://*[contains(text(),"Add Vet")]'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.452" endtime="20210426 13:00:20.484"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr</arg>
+</arguments>
+<assign>
+<var>${linenumber}</var>
+</assign>
+<msg timestamp="20210426 13:00:20.497" level="INFO">${linenumber} = 6</msg>
+<status status="PASS" starttime="20210426 13:00:20.484" endtime="20210426 13:00:20.497"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${linenumber}&gt;0</arg>
+<arg>Verify Edit And Delete</arg>
+</arguments>
+<kw name="Verify Edit And Delete" library="Keywords_Vet">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr[1]/td[3]/button[1]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.510" level="INFO">Current page contains element '//*[@id="vets"]/tbody/tr[1]/td[3]/button[1]'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.498" endtime="20210426 13:00:20.510"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr[1]/td[3]/button[1]</arg>
+<arg>Edit Vet</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.511" level="INFO">Verifying element '//*[@id="vets"]/tbody/tr[1]/td[3]/button[1]' contains exact text 'Edit Vet'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.511" endtime="20210426 13:00:20.531"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr[1]/td[3]/button[2]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.544" level="INFO">Current page contains element '//*[@id="vets"]/tbody/tr[1]/td[3]/button[2]'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.531" endtime="20210426 13:00:20.544"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr[1]/td[3]/button[2]</arg>
+<arg>Delete Vet</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.544" level="INFO">Verifying element '//*[@id="vets"]/tbody/tr[1]/td[3]/button[2]' contains exact text 'Delete Vet'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.544" endtime="20210426 13:00:20.565"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:20.498" endtime="20210426 13:00:20.565"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:20.497" endtime="20210426 13:00:20.565"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:20.219" endtime="20210426 13:00:20.565"></status>
+</kw>
+<kw name="Click Add Vet" library="Keywords_Vet">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(),"Add Vet")]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.566" level="INFO">Clicking button 'xpath://*[contains(text(),"Add Vet")]'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.566" endtime="20210426 13:00:20.664"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>New Veterinarian</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.679" level="INFO">Current page contains text 'New Veterinarian'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.665" endtime="20210426 13:00:20.680"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//*[@id="vet"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.691" level="INFO">Current page contains element '//*[@id="vet"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.680" endtime="20210426 13:00:20.692"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:20.565" endtime="20210426 13:00:20.692"></status>
+</kw>
+<kw name="Create New Pet" library="Keywords_Vet">
+<arguments>
+<arg>Joe</arg>
+<arg>Biden</arg>
+</arguments>
+<kw name="Page Should Contain Textfield" library="SeleniumLibrary">
+<doc>Verifies text field ``locator`` is found from current page.</doc>
+<arguments>
+<arg>//*[@id="firstName"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.716" level="INFO">Current page contains text field '//*[@id="firstName"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.693" endtime="20210426 13:00:20.716"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="firstName"]</arg>
+<arg>${firstname}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.717" level="INFO">Typing text 'Joe' into text field '//*[@id="firstName"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.717" endtime="20210426 13:00:20.817"></status>
+</kw>
+<kw name="Page Should Contain Textfield" library="SeleniumLibrary">
+<doc>Verifies text field ``locator`` is found from current page.</doc>
+<arguments>
+<arg>//*[@id="lastName"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.844" level="INFO">Current page contains text field '//*[@id="lastName"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.817" endtime="20210426 13:00:20.844"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="lastName"]</arg>
+<arg>${lastname}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.845" level="INFO">Typing text 'Biden' into text field '//*[@id="lastName"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.844" endtime="20210426 13:00:20.945"></status>
+</kw>
+<kw name="Page Should Contain List" library="SeleniumLibrary">
+<doc>Verifies selection list ``locator`` is found from current page.</doc>
+<arguments>
+<arg>//*[@id="specialties"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.964" level="INFO">Current page contains list '//*[@id="specialties"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.945" endtime="20210426 13:00:20.964"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="specialties"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:20.964" level="INFO">Clicking element '//*[@id="specialties"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:20.964" endtime="20210426 13:00:21.026"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//*[@id="specialties"]/option</arg>
+</arguments>
+<assign>
+<var>${value_number}</var>
+</assign>
+<msg timestamp="20210426 13:00:21.042" level="INFO">${value_number} = 3</msg>
+<status status="PASS" starttime="20210426 13:00:21.026" endtime="20210426 13:00:21.042"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>random.randint(0,${value_number}-1)</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20210426 13:00:21.043" level="INFO">${value} = 0</msg>
+<status status="PASS" starttime="20210426 13:00:21.042" endtime="20210426 13:00:21.043"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<assign>
+<var>${value_str}</var>
+</assign>
+<msg timestamp="20210426 13:00:21.043" level="INFO">${value_str} = 0</msg>
+<status status="PASS" starttime="20210426 13:00:21.043" endtime="20210426 13:00:21.043"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>//*[@id="specialties"]</arg>
+<arg>${value_str}: Object</arg>
+</arguments>
+<msg timestamp="20210426 13:00:21.044" level="INFO">Selecting options from selection list '//*[@id="specialties"]' by value 0: Object.</msg>
+<status status="PASS" starttime="20210426 13:00:21.044" endtime="20210426 13:00:21.110"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:20.692" endtime="20210426 13:00:21.111"></status>
+</kw>
+<kw name="Confirm To Add New Pet" library="Keywords_Vet">
+<arguments>
+<arg>Joe Biden</arg>
+</arguments>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Save Vet")]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:21.112" level="INFO">Clicking button 'xpath://*[contains(text(), "Save Vet")]'.</msg>
+<status status="PASS" starttime="20210426 13:00:21.112" endtime="20210426 13:00:21.188"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Veterinarians</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:21.188" endtime="20210426 13:00:21.209"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:21.209" endtime="20210426 13:00:21.240"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:21.283" level="INFO">Element '//*[@id="vets"]/tbody' contains text 'Joe Biden'.</msg>
+<status status="PASS" starttime="20210426 13:00:21.241" endtime="20210426 13:00:21.283"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:21.111" endtime="20210426 13:00:21.283"></status>
+</kw>
+<kw name="End the test" library="Keywords_Vet" type="teardown">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@title="home page"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:21.284" level="INFO">Clicking link '//*[@title="home page"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:21.284" endtime="20210426 13:00:21.345"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Welcome to Petclinic</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:21.345" endtime="20210426 13:00:21.356"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210426 13:00:21.356" endtime="20210426 13:00:23.541"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:21.283" endtime="20210426 13:00:23.541"></status>
+</kw>
+<doc>users can add pets</doc>
+<tags>
+<tag>adding</tag>
+</tags>
+<status status="PASS" starttime="20210426 13:00:16.846" endtime="20210426 13:00:23.542" critical="yes"></status>
+</test>
+<test id="s1-t4" name="Add Pet In Veterinarians Navigation">
+<kw name="Generate Tests" library="Keywords_Vet" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:23.549" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210426 13:00:23.548" endtime="20210426 13:00:24.831"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:23.547" endtime="20210426 13:00:24.831"></status>
+</kw>
+<kw name="Go To Web" library="Keywords_Vet">
+<kw name="Load Web" library="Keywords_Vet">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:24.833" level="INFO">Opening url 'http://localhost:4200'</msg>
+<status status="PASS" starttime="20210426 13:00:24.832" endtime="20210426 13:00:26.832"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:24.832" endtime="20210426 13:00:26.833"></status>
+</kw>
+<kw name="Verify Page Loaded" library="Keywords_Vet">
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${GET_TITLE}</var>
+</assign>
+<msg timestamp="20210426 13:00:26.844" level="INFO">${GET_TITLE} = SpringPetclinicAngular</msg>
+<status status="PASS" starttime="20210426 13:00:26.834" endtime="20210426 13:00:26.844"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${GET_TITLE}</arg>
+<arg>SpringPetclinicAngular</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:26.845" endtime="20210426 13:00:26.846"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Welcome to Petclinic</arg>
+</arguments>
+<msg timestamp="20210426 13:00:26.875" level="INFO">Current page contains text 'Welcome to Petclinic'.</msg>
+<status status="PASS" starttime="20210426 13:00:26.846" endtime="20210426 13:00:26.875"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:26.833" endtime="20210426 13:00:26.876"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:24.831" endtime="20210426 13:00:26.876"></status>
+</kw>
+<kw name="Click Veterinarians" library="Keywords_Vet">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:26.892" level="INFO">Current page contains element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]'.</msg>
+<status status="PASS" starttime="20210426 13:00:26.877" endtime="20210426 13:00:26.893"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:26.893" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]'.</msg>
+<status status="PASS" starttime="20210426 13:00:26.893" endtime="20210426 13:00:26.956"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:26.876" endtime="20210426 13:00:26.956"></status>
+</kw>
+<kw name="Quick Add Pet" library="Keywords_Vet">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//*[@routerlink="/vets/add"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:26.971" level="INFO">Current page contains element '//*[@routerlink="/vets/add"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:26.957" endtime="20210426 13:00:26.971"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@routerlink="/vets/add"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:26.972" level="INFO">Clicking element '//*[@routerlink="/vets/add"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:26.971" endtime="20210426 13:00:27.054"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>New Veterinarian</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:27.054" endtime="20210426 13:00:27.074"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//*[@id="vet"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:27.086" level="INFO">Current page contains element '//*[@id="vet"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:27.074" endtime="20210426 13:00:27.086"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:26.956" endtime="20210426 13:00:27.087"></status>
+</kw>
+<kw name="Create New Pet" library="Keywords_Vet">
+<arguments>
+<arg>Barack</arg>
+<arg>Obama</arg>
+</arguments>
+<kw name="Page Should Contain Textfield" library="SeleniumLibrary">
+<doc>Verifies text field ``locator`` is found from current page.</doc>
+<arguments>
+<arg>//*[@id="firstName"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:27.111" level="INFO">Current page contains text field '//*[@id="firstName"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:27.087" endtime="20210426 13:00:27.112"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="firstName"]</arg>
+<arg>${firstname}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:27.112" level="INFO">Typing text 'Barack' into text field '//*[@id="firstName"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:27.112" endtime="20210426 13:00:27.219"></status>
+</kw>
+<kw name="Page Should Contain Textfield" library="SeleniumLibrary">
+<doc>Verifies text field ``locator`` is found from current page.</doc>
+<arguments>
+<arg>//*[@id="lastName"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:27.244" level="INFO">Current page contains text field '//*[@id="lastName"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:27.220" endtime="20210426 13:00:27.244"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="lastName"]</arg>
+<arg>${lastname}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:27.245" level="INFO">Typing text 'Obama' into text field '//*[@id="lastName"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:27.244" endtime="20210426 13:00:27.353"></status>
+</kw>
+<kw name="Page Should Contain List" library="SeleniumLibrary">
+<doc>Verifies selection list ``locator`` is found from current page.</doc>
+<arguments>
+<arg>//*[@id="specialties"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:27.372" level="INFO">Current page contains list '//*[@id="specialties"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:27.353" endtime="20210426 13:00:27.372"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="specialties"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:27.372" level="INFO">Clicking element '//*[@id="specialties"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:27.372" endtime="20210426 13:00:27.438"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//*[@id="specialties"]/option</arg>
+</arguments>
+<assign>
+<var>${value_number}</var>
+</assign>
+<msg timestamp="20210426 13:00:27.458" level="INFO">${value_number} = 3</msg>
+<status status="PASS" starttime="20210426 13:00:27.438" endtime="20210426 13:00:27.458"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>random.randint(0,${value_number}-1)</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20210426 13:00:27.458" level="INFO">${value} = 2</msg>
+<status status="PASS" starttime="20210426 13:00:27.458" endtime="20210426 13:00:27.459"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<assign>
+<var>${value_str}</var>
+</assign>
+<msg timestamp="20210426 13:00:27.459" level="INFO">${value_str} = 2</msg>
+<status status="PASS" starttime="20210426 13:00:27.459" endtime="20210426 13:00:27.459"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>//*[@id="specialties"]</arg>
+<arg>${value_str}: Object</arg>
+</arguments>
+<msg timestamp="20210426 13:00:27.460" level="INFO">Selecting options from selection list '//*[@id="specialties"]' by value 2: Object.</msg>
+<status status="PASS" starttime="20210426 13:00:27.459" endtime="20210426 13:00:27.526"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:27.087" endtime="20210426 13:00:27.526"></status>
+</kw>
+<kw name="Confirm To Add New Pet" library="Keywords_Vet">
+<arguments>
+<arg>Barack Obama</arg>
+</arguments>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(), "Save Vet")]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:27.527" level="INFO">Clicking button 'xpath://*[contains(text(), "Save Vet")]'.</msg>
+<status status="PASS" starttime="20210426 13:00:27.526" endtime="20210426 13:00:27.600"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Veterinarians</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:27.600" endtime="20210426 13:00:27.638"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:27.639" endtime="20210426 13:00:27.651"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:27.707" level="INFO">Element '//*[@id="vets"]/tbody' contains text 'Barack Obama'.</msg>
+<status status="PASS" starttime="20210426 13:00:27.652" endtime="20210426 13:00:27.707"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:27.526" endtime="20210426 13:00:27.707"></status>
+</kw>
+<kw name="End the test" library="Keywords_Vet" type="teardown">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@title="home page"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:27.709" level="INFO">Clicking link '//*[@title="home page"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:27.709" endtime="20210426 13:00:27.770"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Welcome to Petclinic</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:27.770" endtime="20210426 13:00:27.780"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210426 13:00:27.780" endtime="20210426 13:00:29.962"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:27.708" endtime="20210426 13:00:29.963"></status>
+</kw>
+<doc>users can add pet in Veterinarians</doc>
+<tags>
+<tag>quick adding</tag>
+</tags>
+<status status="PASS" starttime="20210426 13:00:23.544" endtime="20210426 13:00:29.963" critical="yes"></status>
+</test>
+<test id="s1-t5" name="Cancel Adding New Vet">
+<kw name="Generate Tests" library="Keywords_Vet" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:29.971" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210426 13:00:29.969" endtime="20210426 13:00:31.196"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:29.967" endtime="20210426 13:00:31.197"></status>
+</kw>
+<kw name="Go To Web" library="Keywords_Vet">
+<kw name="Load Web" library="Keywords_Vet">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:31.199" level="INFO">Opening url 'http://localhost:4200'</msg>
+<status status="PASS" starttime="20210426 13:00:31.198" endtime="20210426 13:00:33.172"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:31.197" endtime="20210426 13:00:33.172"></status>
+</kw>
+<kw name="Verify Page Loaded" library="Keywords_Vet">
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${GET_TITLE}</var>
+</assign>
+<msg timestamp="20210426 13:00:33.178" level="INFO">${GET_TITLE} = SpringPetclinicAngular</msg>
+<status status="PASS" starttime="20210426 13:00:33.173" endtime="20210426 13:00:33.178"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${GET_TITLE}</arg>
+<arg>SpringPetclinicAngular</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:33.178" endtime="20210426 13:00:33.179"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Welcome to Petclinic</arg>
+</arguments>
+<msg timestamp="20210426 13:00:33.197" level="INFO">Current page contains text 'Welcome to Petclinic'.</msg>
+<status status="PASS" starttime="20210426 13:00:33.179" endtime="20210426 13:00:33.197"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:33.172" endtime="20210426 13:00:33.197"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:31.197" endtime="20210426 13:00:33.197"></status>
+</kw>
+<kw name="Click Veterinarians" library="Keywords_Vet">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:33.210" level="INFO">Current page contains element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]'.</msg>
+<status status="PASS" starttime="20210426 13:00:33.198" endtime="20210426 13:00:33.210"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:33.210" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]'.</msg>
+<status status="PASS" starttime="20210426 13:00:33.210" endtime="20210426 13:00:33.264"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:33.197" endtime="20210426 13:00:33.264"></status>
+</kw>
+<kw name="All Query" library="Keywords_Vet">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//*[@routerlink="/vets"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:33.278" level="INFO">Current page contains element '//*[@routerlink="/vets"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:33.265" endtime="20210426 13:00:33.278"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@routerlink="/vets"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:33.278" level="INFO">Clicking element '//*[@routerlink="/vets"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:33.278" endtime="20210426 13:00:33.444"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Veterinarians</arg>
+</arguments>
+<msg timestamp="20210426 13:00:33.475" level="INFO">Current page contains text 'Veterinarians'.</msg>
+<status status="PASS" starttime="20210426 13:00:33.445" endtime="20210426 13:00:33.476"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//*[@id="vets"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:33.490" level="INFO">Current page contains element '//*[@id="vets"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:33.476" endtime="20210426 13:00:33.490"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/thead/tr/th[1]</arg>
+<arg>Name</arg>
+</arguments>
+<msg timestamp="20210426 13:00:33.491" level="INFO">Verifying element '//*[@id="vets"]/thead/tr/th[1]' contains exact text 'Name'.</msg>
+<status status="PASS" starttime="20210426 13:00:33.490" endtime="20210426 13:00:33.526"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/thead/tr/th[2]</arg>
+<arg>Specialties</arg>
+</arguments>
+<msg timestamp="20210426 13:00:33.526" level="INFO">Verifying element '//*[@id="vets"]/thead/tr/th[2]' contains exact text 'Specialties'.</msg>
+<status status="PASS" starttime="20210426 13:00:33.526" endtime="20210426 13:00:33.555"></status>
+</kw>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:33.590" level="INFO">Current page contains button 'xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]'.</msg>
+<status status="PASS" starttime="20210426 13:00:33.555" endtime="20210426 13:00:33.590"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]</arg>
+<arg>Home</arg>
+</arguments>
+<msg timestamp="20210426 13:00:33.590" level="INFO">Verifying element 'xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]' contains exact text 'Home'.</msg>
+<status status="PASS" starttime="20210426 13:00:33.590" endtime="20210426 13:00:33.612"></status>
+</kw>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath://*[contains(text(),"Add Vet")]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:33.645" level="INFO">Current page contains button 'xpath://*[contains(text(),"Add Vet")]'.</msg>
+<status status="PASS" starttime="20210426 13:00:33.612" endtime="20210426 13:00:33.645"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr</arg>
+</arguments>
+<assign>
+<var>${linenumber}</var>
+</assign>
+<msg timestamp="20210426 13:00:33.663" level="INFO">${linenumber} = 8</msg>
+<status status="PASS" starttime="20210426 13:00:33.645" endtime="20210426 13:00:33.663"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${linenumber}&gt;0</arg>
+<arg>Verify Edit And Delete</arg>
+</arguments>
+<kw name="Verify Edit And Delete" library="Keywords_Vet">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr[1]/td[3]/button[1]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:33.689" level="INFO">Current page contains element '//*[@id="vets"]/tbody/tr[1]/td[3]/button[1]'.</msg>
+<status status="PASS" starttime="20210426 13:00:33.665" endtime="20210426 13:00:33.690"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr[1]/td[3]/button[1]</arg>
+<arg>Edit Vet</arg>
+</arguments>
+<msg timestamp="20210426 13:00:33.691" level="INFO">Verifying element '//*[@id="vets"]/tbody/tr[1]/td[3]/button[1]' contains exact text 'Edit Vet'.</msg>
+<status status="PASS" starttime="20210426 13:00:33.690" endtime="20210426 13:00:33.713"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr[1]/td[3]/button[2]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:33.726" level="INFO">Current page contains element '//*[@id="vets"]/tbody/tr[1]/td[3]/button[2]'.</msg>
+<status status="PASS" starttime="20210426 13:00:33.713" endtime="20210426 13:00:33.726"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr[1]/td[3]/button[2]</arg>
+<arg>Delete Vet</arg>
+</arguments>
+<msg timestamp="20210426 13:00:33.727" level="INFO">Verifying element '//*[@id="vets"]/tbody/tr[1]/td[3]/button[2]' contains exact text 'Delete Vet'.</msg>
+<status status="PASS" starttime="20210426 13:00:33.726" endtime="20210426 13:00:33.749"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:33.665" endtime="20210426 13:00:33.749"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:33.664" endtime="20210426 13:00:33.749"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:33.264" endtime="20210426 13:00:33.749"></status>
+</kw>
+<kw name="Click Add Vet" library="Keywords_Vet">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[contains(text(),"Add Vet")]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:33.750" level="INFO">Clicking button 'xpath://*[contains(text(),"Add Vet")]'.</msg>
+<status status="PASS" starttime="20210426 13:00:33.750" endtime="20210426 13:00:33.849"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>New Veterinarian</arg>
+</arguments>
+<msg timestamp="20210426 13:00:33.863" level="INFO">Current page contains text 'New Veterinarian'.</msg>
+<status status="PASS" starttime="20210426 13:00:33.849" endtime="20210426 13:00:33.863"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//*[@id="vet"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:33.883" level="INFO">Current page contains element '//*[@id="vet"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:33.864" endtime="20210426 13:00:33.883"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:33.750" endtime="20210426 13:00:33.883"></status>
+</kw>
+<kw name="Create New Pet" library="Keywords_Vet">
+<arguments>
+<arg>Bill</arg>
+<arg>Clinton</arg>
+</arguments>
+<kw name="Page Should Contain Textfield" library="SeleniumLibrary">
+<doc>Verifies text field ``locator`` is found from current page.</doc>
+<arguments>
+<arg>//*[@id="firstName"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:33.908" level="INFO">Current page contains text field '//*[@id="firstName"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:33.884" endtime="20210426 13:00:33.909"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="firstName"]</arg>
+<arg>${firstname}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:33.909" level="INFO">Typing text 'Bill' into text field '//*[@id="firstName"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:33.909" endtime="20210426 13:00:34.011"></status>
+</kw>
+<kw name="Page Should Contain Textfield" library="SeleniumLibrary">
+<doc>Verifies text field ``locator`` is found from current page.</doc>
+<arguments>
+<arg>//*[@id="lastName"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:34.039" level="INFO">Current page contains text field '//*[@id="lastName"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:34.011" endtime="20210426 13:00:34.039"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="lastName"]</arg>
+<arg>${lastname}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:34.039" level="INFO">Typing text 'Clinton' into text field '//*[@id="lastName"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:34.039" endtime="20210426 13:00:34.140"></status>
+</kw>
+<kw name="Page Should Contain List" library="SeleniumLibrary">
+<doc>Verifies selection list ``locator`` is found from current page.</doc>
+<arguments>
+<arg>//*[@id="specialties"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:34.157" level="INFO">Current page contains list '//*[@id="specialties"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:34.140" endtime="20210426 13:00:34.157"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="specialties"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:34.158" level="INFO">Clicking element '//*[@id="specialties"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:34.158" endtime="20210426 13:00:34.216"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//*[@id="specialties"]/option</arg>
+</arguments>
+<assign>
+<var>${value_number}</var>
+</assign>
+<msg timestamp="20210426 13:00:34.232" level="INFO">${value_number} = 3</msg>
+<status status="PASS" starttime="20210426 13:00:34.216" endtime="20210426 13:00:34.232"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>random.randint(0,${value_number}-1)</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20210426 13:00:34.233" level="INFO">${value} = 2</msg>
+<status status="PASS" starttime="20210426 13:00:34.233" endtime="20210426 13:00:34.233"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<assign>
+<var>${value_str}</var>
+</assign>
+<msg timestamp="20210426 13:00:34.234" level="INFO">${value_str} = 2</msg>
+<status status="PASS" starttime="20210426 13:00:34.233" endtime="20210426 13:00:34.234"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>//*[@id="specialties"]</arg>
+<arg>${value_str}: Object</arg>
+</arguments>
+<msg timestamp="20210426 13:00:34.234" level="INFO">Selecting options from selection list '//*[@id="specialties"]' by value 2: Object.</msg>
+<status status="PASS" starttime="20210426 13:00:34.234" endtime="20210426 13:00:34.299"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:33.883" endtime="20210426 13:00:34.299"></status>
+</kw>
+<kw name="Cancel To Add New Pet" library="Keywords_Vet">
+<arguments>
+<arg>Bill Clinton</arg>
+</arguments>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="vet"]/div[5]/div/button[1]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:34.300" level="INFO">Clicking button '//*[@id="vet"]/div[5]/div/button[1]'.</msg>
+<status status="PASS" starttime="20210426 13:00:34.300" endtime="20210426 13:00:34.382"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Veterinarians</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:34.382" endtime="20210426 13:00:34.399"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:34.400" endtime="20210426 13:00:34.417"></status>
+</kw>
+<kw name="Element Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:34.465" level="INFO">Element '//*[@id="vets"]/tbody' does not contain text 'Bill Clinton'.</msg>
+<status status="PASS" starttime="20210426 13:00:34.417" endtime="20210426 13:00:34.465"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:34.299" endtime="20210426 13:00:34.465"></status>
+</kw>
+<kw name="End the test" library="Keywords_Vet" type="teardown">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@title="home page"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:34.466" level="INFO">Clicking link '//*[@title="home page"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:34.466" endtime="20210426 13:00:34.527"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Welcome to Petclinic</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:34.527" endtime="20210426 13:00:34.538"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210426 13:00:34.538" endtime="20210426 13:00:36.891"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:34.465" endtime="20210426 13:00:36.892"></status>
+</kw>
+<doc>users can cancel adding pets before comfirmation</doc>
+<tags>
+<tag>cancel adding</tag>
+</tags>
+<status status="PASS" starttime="20210426 13:00:29.965" endtime="20210426 13:00:36.892" critical="yes"></status>
+</test>
+<test id="s1-t6" name="Edit Pet's Information">
+<kw name="Generate Tests" library="Keywords_Vet" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:36.899" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210426 13:00:36.898" endtime="20210426 13:00:38.153"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:36.896" endtime="20210426 13:00:38.154"></status>
+</kw>
+<kw name="Go To Web" library="Keywords_Vet">
+<kw name="Load Web" library="Keywords_Vet">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:38.155" level="INFO">Opening url 'http://localhost:4200'</msg>
+<status status="PASS" starttime="20210426 13:00:38.155" endtime="20210426 13:00:39.917"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:38.155" endtime="20210426 13:00:39.917"></status>
+</kw>
+<kw name="Verify Page Loaded" library="Keywords_Vet">
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${GET_TITLE}</var>
+</assign>
+<msg timestamp="20210426 13:00:39.924" level="INFO">${GET_TITLE} = SpringPetclinicAngular</msg>
+<status status="PASS" starttime="20210426 13:00:39.918" endtime="20210426 13:00:39.924"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${GET_TITLE}</arg>
+<arg>SpringPetclinicAngular</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:39.925" endtime="20210426 13:00:39.925"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Welcome to Petclinic</arg>
+</arguments>
+<msg timestamp="20210426 13:00:39.942" level="INFO">Current page contains text 'Welcome to Petclinic'.</msg>
+<status status="PASS" starttime="20210426 13:00:39.925" endtime="20210426 13:00:39.942"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:39.917" endtime="20210426 13:00:39.943"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:38.154" endtime="20210426 13:00:39.943"></status>
+</kw>
+<kw name="Click Veterinarians" library="Keywords_Vet">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:39.956" level="INFO">Current page contains element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]'.</msg>
+<status status="PASS" starttime="20210426 13:00:39.943" endtime="20210426 13:00:39.956"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:39.957" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]'.</msg>
+<status status="PASS" starttime="20210426 13:00:39.957" endtime="20210426 13:00:40.010"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:39.943" endtime="20210426 13:00:40.011"></status>
+</kw>
+<kw name="All Query" library="Keywords_Vet">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//*[@routerlink="/vets"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:40.026" level="INFO">Current page contains element '//*[@routerlink="/vets"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:40.011" endtime="20210426 13:00:40.026"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@routerlink="/vets"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:40.027" level="INFO">Clicking element '//*[@routerlink="/vets"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:40.027" endtime="20210426 13:00:40.091"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Veterinarians</arg>
+</arguments>
+<msg timestamp="20210426 13:00:40.106" level="INFO">Current page contains text 'Veterinarians'.</msg>
+<status status="PASS" starttime="20210426 13:00:40.091" endtime="20210426 13:00:40.106"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//*[@id="vets"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:40.119" level="INFO">Current page contains element '//*[@id="vets"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:40.107" endtime="20210426 13:00:40.119"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/thead/tr/th[1]</arg>
+<arg>Name</arg>
+</arguments>
+<msg timestamp="20210426 13:00:40.120" level="INFO">Verifying element '//*[@id="vets"]/thead/tr/th[1]' contains exact text 'Name'.</msg>
+<status status="PASS" starttime="20210426 13:00:40.119" endtime="20210426 13:00:40.146"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/thead/tr/th[2]</arg>
+<arg>Specialties</arg>
+</arguments>
+<msg timestamp="20210426 13:00:40.147" level="INFO">Verifying element '//*[@id="vets"]/thead/tr/th[2]' contains exact text 'Specialties'.</msg>
+<status status="PASS" starttime="20210426 13:00:40.147" endtime="20210426 13:00:40.174"></status>
+</kw>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:40.209" level="INFO">Current page contains button 'xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]'.</msg>
+<status status="PASS" starttime="20210426 13:00:40.175" endtime="20210426 13:00:40.209"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]</arg>
+<arg>Home</arg>
+</arguments>
+<msg timestamp="20210426 13:00:40.210" level="INFO">Verifying element 'xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]' contains exact text 'Home'.</msg>
+<status status="PASS" starttime="20210426 13:00:40.210" endtime="20210426 13:00:40.231"></status>
+</kw>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath://*[contains(text(),"Add Vet")]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:40.274" level="INFO">Current page contains button 'xpath://*[contains(text(),"Add Vet")]'.</msg>
+<status status="PASS" starttime="20210426 13:00:40.231" endtime="20210426 13:00:40.275"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr</arg>
+</arguments>
+<assign>
+<var>${linenumber}</var>
+</assign>
+<msg timestamp="20210426 13:00:40.288" level="INFO">${linenumber} = 8</msg>
+<status status="PASS" starttime="20210426 13:00:40.275" endtime="20210426 13:00:40.288"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${linenumber}&gt;0</arg>
+<arg>Verify Edit And Delete</arg>
+</arguments>
+<kw name="Verify Edit And Delete" library="Keywords_Vet">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr[1]/td[3]/button[1]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:40.301" level="INFO">Current page contains element '//*[@id="vets"]/tbody/tr[1]/td[3]/button[1]'.</msg>
+<status status="PASS" starttime="20210426 13:00:40.289" endtime="20210426 13:00:40.301"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr[1]/td[3]/button[1]</arg>
+<arg>Edit Vet</arg>
+</arguments>
+<msg timestamp="20210426 13:00:40.301" level="INFO">Verifying element '//*[@id="vets"]/tbody/tr[1]/td[3]/button[1]' contains exact text 'Edit Vet'.</msg>
+<status status="PASS" starttime="20210426 13:00:40.301" endtime="20210426 13:00:40.326"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr[1]/td[3]/button[2]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:40.338" level="INFO">Current page contains element '//*[@id="vets"]/tbody/tr[1]/td[3]/button[2]'.</msg>
+<status status="PASS" starttime="20210426 13:00:40.326" endtime="20210426 13:00:40.338"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr[1]/td[3]/button[2]</arg>
+<arg>Delete Vet</arg>
+</arguments>
+<msg timestamp="20210426 13:00:40.339" level="INFO">Verifying element '//*[@id="vets"]/tbody/tr[1]/td[3]/button[2]' contains exact text 'Delete Vet'.</msg>
+<status status="PASS" starttime="20210426 13:00:40.338" endtime="20210426 13:00:40.358"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:40.288" endtime="20210426 13:00:40.358"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:40.288" endtime="20210426 13:00:40.359"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:40.011" endtime="20210426 13:00:40.359"></status>
+</kw>
+<kw name="Edit Pet" library="Keywords_Vet">
+<arguments>
+<arg>Barack Obama</arg>
+<arg>Donald</arg>
+<arg>Trump</arg>
+<arg>dentistry</arg>
+</arguments>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//td[contains(text(), "${name}")]/parent::tr/td[3]/button[1]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:40.360" level="INFO">Clicking button 'xpath=//td[contains(text(), "Barack Obama")]/parent::tr/td[3]/button[1]'.</msg>
+<status status="PASS" starttime="20210426 13:00:40.360" endtime="20210426 13:00:40.452"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Edit Veterinarian</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:40.453" endtime="20210426 13:00:40.512"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="firstName"]</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:40.512" endtime="20210426 13:00:40.561"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="firstName"]</arg>
+<arg>${new_firstname}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:40.562" level="INFO">Typing text 'Donald' into text field '//*[@id="firstName"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:40.561" endtime="20210426 13:00:40.651"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="lastName"]</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:40.651" endtime="20210426 13:00:40.706"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="lastName"]</arg>
+<arg>${new_lastname}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:40.707" level="INFO">Typing text 'Trump' into text field '//*[@id="lastName"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:40.706" endtime="20210426 13:00:40.789"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="spec"]/div/div[2]/div</arg>
+</arguments>
+<msg timestamp="20210426 13:00:40.789" level="INFO">Clicking element '//*[@id="spec"]/div/div[2]/div'.</msg>
+<status status="PASS" starttime="20210426 13:00:40.789" endtime="20210426 13:00:40.861"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//span[contains(text(), ${specialist})]/parent::mat-option//mat-pseudo-checkbox</arg>
+</arguments>
+<msg timestamp="20210426 13:00:40.861" level="INFO">Clicking element '//span[contains(text(), dentistry)]/parent::mat-option//mat-pseudo-checkbox'.</msg>
+<status status="PASS" starttime="20210426 13:00:40.861" endtime="20210426 13:00:40.917"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>ESC</arg>
+</arguments>
+<msg timestamp="20210426 13:00:40.918" level="INFO">Sending key(s) ('ESC',) to page.</msg>
+<msg timestamp="20210426 13:00:40.918" level="INFO">Pressing special key ESCAPE to browser.</msg>
+<msg timestamp="20210426 13:00:40.918" level="INFO">Releasing special key ESCAPE.</msg>
+<status status="PASS" starttime="20210426 13:00:40.917" endtime="20210426 13:00:40.931"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:40.359" endtime="20210426 13:00:40.931"></status>
+</kw>
+<kw name="Confirm to Edit" library="Keywords_Vet">
+<arguments>
+<arg>Donald Trump</arg>
+</arguments>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>//button[contains(text(),"Save Vet")]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:40.932" level="INFO">Clicking button '//button[contains(text(),"Save Vet")]'.</msg>
+<status status="PASS" starttime="20210426 13:00:40.932" endtime="20210426 13:00:41.003"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20210426 13:00:51.004" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20210426 13:00:41.003" endtime="20210426 13:00:51.005"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody</arg>
+<arg>${newname}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:51.080" level="INFO">Element '//*[@id="vets"]/tbody' contains text 'Donald Trump'.</msg>
+<status status="PASS" starttime="20210426 13:00:51.005" endtime="20210426 13:00:51.080"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:40.931" endtime="20210426 13:00:51.080"></status>
+</kw>
+<kw name="End the test" library="Keywords_Vet" type="teardown">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@title="home page"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:51.081" level="INFO">Clicking link '//*[@title="home page"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:51.081" endtime="20210426 13:00:51.151"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Welcome to Petclinic</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:51.151" endtime="20210426 13:00:51.166"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210426 13:00:51.167" endtime="20210426 13:00:53.424"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:51.080" endtime="20210426 13:00:53.425"></status>
+</kw>
+<doc>users can edit pet's information</doc>
+<tags>
+<tag>edit</tag>
+</tags>
+<status status="PASS" starttime="20210426 13:00:36.894" endtime="20210426 13:00:53.425" critical="yes"></status>
+</test>
+<test id="s1-t7" name="Pet's Information Cancel">
+<kw name="Generate Tests" library="Keywords_Vet" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:53.433" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210426 13:00:53.432" endtime="20210426 13:00:54.703"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:53.430" endtime="20210426 13:00:54.703"></status>
+</kw>
+<kw name="Go To Web" library="Keywords_Vet">
+<kw name="Load Web" library="Keywords_Vet">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:54.705" level="INFO">Opening url 'http://localhost:4200'</msg>
+<status status="PASS" starttime="20210426 13:00:54.705" endtime="20210426 13:00:57.124"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:54.704" endtime="20210426 13:00:57.124"></status>
+</kw>
+<kw name="Verify Page Loaded" library="Keywords_Vet">
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${GET_TITLE}</var>
+</assign>
+<msg timestamp="20210426 13:00:57.132" level="INFO">${GET_TITLE} = SpringPetclinicAngular</msg>
+<status status="PASS" starttime="20210426 13:00:57.126" endtime="20210426 13:00:57.132"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${GET_TITLE}</arg>
+<arg>SpringPetclinicAngular</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:57.132" endtime="20210426 13:00:57.133"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Welcome to Petclinic</arg>
+</arguments>
+<msg timestamp="20210426 13:00:57.152" level="INFO">Current page contains text 'Welcome to Petclinic'.</msg>
+<status status="PASS" starttime="20210426 13:00:57.133" endtime="20210426 13:00:57.152"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:57.125" endtime="20210426 13:00:57.152"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:54.704" endtime="20210426 13:00:57.152"></status>
+</kw>
+<kw name="Click Veterinarians" library="Keywords_Vet">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:57.179" level="INFO">Current page contains element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]'.</msg>
+<status status="PASS" starttime="20210426 13:00:57.153" endtime="20210426 13:00:57.179"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:57.179" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]'.</msg>
+<status status="PASS" starttime="20210426 13:00:57.179" endtime="20210426 13:00:57.245"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:57.153" endtime="20210426 13:00:57.245"></status>
+</kw>
+<kw name="All Query" library="Keywords_Vet">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//*[@routerlink="/vets"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:57.261" level="INFO">Current page contains element '//*[@routerlink="/vets"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:57.246" endtime="20210426 13:00:57.262"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@routerlink="/vets"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:57.262" level="INFO">Clicking element '//*[@routerlink="/vets"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:57.262" endtime="20210426 13:00:57.346"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Veterinarians</arg>
+</arguments>
+<msg timestamp="20210426 13:00:57.363" level="INFO">Current page contains text 'Veterinarians'.</msg>
+<status status="PASS" starttime="20210426 13:00:57.346" endtime="20210426 13:00:57.363"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//*[@id="vets"]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:57.379" level="INFO">Current page contains element '//*[@id="vets"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:57.364" endtime="20210426 13:00:57.379"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/thead/tr/th[1]</arg>
+<arg>Name</arg>
+</arguments>
+<msg timestamp="20210426 13:00:57.380" level="INFO">Verifying element '//*[@id="vets"]/thead/tr/th[1]' contains exact text 'Name'.</msg>
+<status status="PASS" starttime="20210426 13:00:57.379" endtime="20210426 13:00:57.409"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/thead/tr/th[2]</arg>
+<arg>Specialties</arg>
+</arguments>
+<msg timestamp="20210426 13:00:57.409" level="INFO">Verifying element '//*[@id="vets"]/thead/tr/th[2]' contains exact text 'Specialties'.</msg>
+<status status="PASS" starttime="20210426 13:00:57.409" endtime="20210426 13:00:57.446"></status>
+</kw>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:57.484" level="INFO">Current page contains button 'xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]'.</msg>
+<status status="PASS" starttime="20210426 13:00:57.447" endtime="20210426 13:00:57.484"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]</arg>
+<arg>Home</arg>
+</arguments>
+<msg timestamp="20210426 13:00:57.485" level="INFO">Verifying element 'xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]' contains exact text 'Home'.</msg>
+<status status="PASS" starttime="20210426 13:00:57.484" endtime="20210426 13:00:57.517"></status>
+</kw>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath://*[contains(text(),"Add Vet")]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:57.551" level="INFO">Current page contains button 'xpath://*[contains(text(),"Add Vet")]'.</msg>
+<status status="PASS" starttime="20210426 13:00:57.517" endtime="20210426 13:00:57.552"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr</arg>
+</arguments>
+<assign>
+<var>${linenumber}</var>
+</assign>
+<msg timestamp="20210426 13:00:57.566" level="INFO">${linenumber} = 8</msg>
+<status status="PASS" starttime="20210426 13:00:57.552" endtime="20210426 13:00:57.566"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${linenumber}&gt;0</arg>
+<arg>Verify Edit And Delete</arg>
+</arguments>
+<kw name="Verify Edit And Delete" library="Keywords_Vet">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr[1]/td[3]/button[1]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:57.580" level="INFO">Current page contains element '//*[@id="vets"]/tbody/tr[1]/td[3]/button[1]'.</msg>
+<status status="PASS" starttime="20210426 13:00:57.567" endtime="20210426 13:00:57.580"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr[1]/td[3]/button[1]</arg>
+<arg>Edit Vet</arg>
+</arguments>
+<msg timestamp="20210426 13:00:57.581" level="INFO">Verifying element '//*[@id="vets"]/tbody/tr[1]/td[3]/button[1]' contains exact text 'Edit Vet'.</msg>
+<status status="PASS" starttime="20210426 13:00:57.580" endtime="20210426 13:00:57.603"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr[1]/td[3]/button[2]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:57.617" level="INFO">Current page contains element '//*[@id="vets"]/tbody/tr[1]/td[3]/button[2]'.</msg>
+<status status="PASS" starttime="20210426 13:00:57.603" endtime="20210426 13:00:57.617"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr[1]/td[3]/button[2]</arg>
+<arg>Delete Vet</arg>
+</arguments>
+<msg timestamp="20210426 13:00:57.617" level="INFO">Verifying element '//*[@id="vets"]/tbody/tr[1]/td[3]/button[2]' contains exact text 'Delete Vet'.</msg>
+<status status="PASS" starttime="20210426 13:00:57.617" endtime="20210426 13:00:57.640"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:57.567" endtime="20210426 13:00:57.640"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:57.566" endtime="20210426 13:00:57.640"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:57.246" endtime="20210426 13:00:57.641"></status>
+</kw>
+<kw name="Edit Pet" library="Keywords_Vet">
+<arguments>
+<arg>Joe Biden</arg>
+<arg>Antony</arg>
+<arg>Blinken</arg>
+<arg>dentistry</arg>
+</arguments>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//td[contains(text(), "${name}")]/parent::tr/td[3]/button[1]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:57.642" level="INFO">Clicking button 'xpath=//td[contains(text(), "Joe Biden")]/parent::tr/td[3]/button[1]'.</msg>
+<status status="PASS" starttime="20210426 13:00:57.642" endtime="20210426 13:00:57.730"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Edit Veterinarian</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:57.731" endtime="20210426 13:00:57.967"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="firstName"]</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:57.968" endtime="20210426 13:00:58.069"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="firstName"]</arg>
+<arg>${new_firstname}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:58.069" level="INFO">Typing text 'Antony' into text field '//*[@id="firstName"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:58.069" endtime="20210426 13:00:58.157"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="lastName"]</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:00:58.157" endtime="20210426 13:00:58.211"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="lastName"]</arg>
+<arg>${new_lastname}</arg>
+</arguments>
+<msg timestamp="20210426 13:00:58.212" level="INFO">Typing text 'Blinken' into text field '//*[@id="lastName"]'.</msg>
+<status status="PASS" starttime="20210426 13:00:58.211" endtime="20210426 13:00:58.297"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="spec"]/div/div[2]/div</arg>
+</arguments>
+<msg timestamp="20210426 13:00:58.297" level="INFO">Clicking element '//*[@id="spec"]/div/div[2]/div'.</msg>
+<status status="PASS" starttime="20210426 13:00:58.297" endtime="20210426 13:00:58.364"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//span[contains(text(), ${specialist})]/parent::mat-option//mat-pseudo-checkbox</arg>
+</arguments>
+<msg timestamp="20210426 13:00:58.364" level="INFO">Clicking element '//span[contains(text(), dentistry)]/parent::mat-option//mat-pseudo-checkbox'.</msg>
+<status status="PASS" starttime="20210426 13:00:58.364" endtime="20210426 13:00:58.422"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>ESC</arg>
+</arguments>
+<msg timestamp="20210426 13:00:58.423" level="INFO">Sending key(s) ('ESC',) to page.</msg>
+<msg timestamp="20210426 13:00:58.423" level="INFO">Pressing special key ESCAPE to browser.</msg>
+<msg timestamp="20210426 13:00:58.423" level="INFO">Releasing special key ESCAPE.</msg>
+<status status="PASS" starttime="20210426 13:00:58.422" endtime="20210426 13:00:58.437"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:57.641" endtime="20210426 13:00:58.438"></status>
+</kw>
+<kw name="Cancel Editing" library="Keywords_Vet">
+<arguments>
+<arg>Joe Biden</arg>
+</arguments>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>//button[contains(text(),"Back")]</arg>
+</arguments>
+<msg timestamp="20210426 13:00:58.438" level="INFO">Clicking button '//button[contains(text(),"Back")]'.</msg>
+<status status="PASS" starttime="20210426 13:00:58.438" endtime="20210426 13:00:58.519"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20210426 13:01:08.521" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20210426 13:00:58.519" endtime="20210426 13:01:08.521"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20210426 13:01:08.572" level="INFO">Element '//*[@id="vets"]/tbody' contains text 'Joe Biden'.</msg>
+<status status="PASS" starttime="20210426 13:01:08.521" endtime="20210426 13:01:08.572"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:00:58.438" endtime="20210426 13:01:08.572"></status>
+</kw>
+<kw name="End the test" library="Keywords_Vet" type="teardown">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@title="home page"]</arg>
+</arguments>
+<msg timestamp="20210426 13:01:08.574" level="INFO">Clicking link '//*[@title="home page"]'.</msg>
+<status status="PASS" starttime="20210426 13:01:08.573" endtime="20210426 13:01:08.647"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Welcome to Petclinic</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:01:08.647" endtime="20210426 13:01:08.664"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210426 13:01:08.664" endtime="20210426 13:01:11.030"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:01:08.573" endtime="20210426 13:01:11.031"></status>
+</kw>
+<doc>users can cancel editing pets</doc>
+<tags>
+<tag>cancel editing</tag>
+</tags>
+<status status="PASS" starttime="20210426 13:00:53.428" endtime="20210426 13:01:11.031" critical="yes"></status>
+</test>
+<test id="s1-t8" name="Delete Specific Pet By Name">
+<kw name="Generate Tests" library="Keywords_Vet" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210426 13:01:11.037" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210426 13:01:11.036" endtime="20210426 13:01:12.280"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:01:11.035" endtime="20210426 13:01:12.280"></status>
+</kw>
+<kw name="Go To Web" library="Keywords_Vet">
+<kw name="Load Web" library="Keywords_Vet">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20210426 13:01:12.282" level="INFO">Opening url 'http://localhost:4200'</msg>
+<status status="PASS" starttime="20210426 13:01:12.282" endtime="20210426 13:01:14.089"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:01:12.281" endtime="20210426 13:01:14.089"></status>
+</kw>
+<kw name="Verify Page Loaded" library="Keywords_Vet">
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${GET_TITLE}</var>
+</assign>
+<msg timestamp="20210426 13:01:14.096" level="INFO">${GET_TITLE} = SpringPetclinicAngular</msg>
+<status status="PASS" starttime="20210426 13:01:14.090" endtime="20210426 13:01:14.096"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${GET_TITLE}</arg>
+<arg>SpringPetclinicAngular</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:01:14.096" endtime="20210426 13:01:14.097"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Welcome to Petclinic</arg>
+</arguments>
+<msg timestamp="20210426 13:01:14.114" level="INFO">Current page contains text 'Welcome to Petclinic'.</msg>
+<status status="PASS" starttime="20210426 13:01:14.097" endtime="20210426 13:01:14.114"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:01:14.089" endtime="20210426 13:01:14.114"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:01:12.280" endtime="20210426 13:01:14.114"></status>
+</kw>
+<kw name="Click Veterinarians" library="Keywords_Vet">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]</arg>
+</arguments>
+<msg timestamp="20210426 13:01:14.128" level="INFO">Current page contains element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]'.</msg>
+<status status="PASS" starttime="20210426 13:01:14.115" endtime="20210426 13:01:14.129"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]</arg>
+</arguments>
+<msg timestamp="20210426 13:01:14.129" level="INFO">Clicking element 'xpath:/html/body/app-root/div[1]/nav/div/ul/li[3]'.</msg>
+<status status="PASS" starttime="20210426 13:01:14.129" endtime="20210426 13:01:14.185"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:01:14.115" endtime="20210426 13:01:14.186"></status>
+</kw>
+<kw name="All Query" library="Keywords_Vet">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//*[@routerlink="/vets"]</arg>
+</arguments>
+<msg timestamp="20210426 13:01:14.200" level="INFO">Current page contains element '//*[@routerlink="/vets"]'.</msg>
+<status status="PASS" starttime="20210426 13:01:14.186" endtime="20210426 13:01:14.200"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@routerlink="/vets"]</arg>
+</arguments>
+<msg timestamp="20210426 13:01:14.200" level="INFO">Clicking element '//*[@routerlink="/vets"]'.</msg>
+<status status="PASS" starttime="20210426 13:01:14.200" endtime="20210426 13:01:14.304"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Veterinarians</arg>
+</arguments>
+<msg timestamp="20210426 13:01:14.361" level="INFO">Current page contains text 'Veterinarians'.</msg>
+<status status="PASS" starttime="20210426 13:01:14.304" endtime="20210426 13:01:14.361"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//*[@id="vets"]</arg>
+</arguments>
+<msg timestamp="20210426 13:01:14.378" level="INFO">Current page contains element '//*[@id="vets"]'.</msg>
+<status status="PASS" starttime="20210426 13:01:14.362" endtime="20210426 13:01:14.378"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/thead/tr/th[1]</arg>
+<arg>Name</arg>
+</arguments>
+<msg timestamp="20210426 13:01:14.379" level="INFO">Verifying element '//*[@id="vets"]/thead/tr/th[1]' contains exact text 'Name'.</msg>
+<status status="PASS" starttime="20210426 13:01:14.378" endtime="20210426 13:01:14.411"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/thead/tr/th[2]</arg>
+<arg>Specialties</arg>
+</arguments>
+<msg timestamp="20210426 13:01:14.412" level="INFO">Verifying element '//*[@id="vets"]/thead/tr/th[2]' contains exact text 'Specialties'.</msg>
+<status status="PASS" starttime="20210426 13:01:14.411" endtime="20210426 13:01:14.439"></status>
+</kw>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]</arg>
+</arguments>
+<msg timestamp="20210426 13:01:14.472" level="INFO">Current page contains button 'xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]'.</msg>
+<status status="PASS" starttime="20210426 13:01:14.440" endtime="20210426 13:01:14.473"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]</arg>
+<arg>Home</arg>
+</arguments>
+<msg timestamp="20210426 13:01:14.473" level="INFO">Verifying element 'xpath:/html/body/app-root/app-vet-list/div/div/div/button[1]' contains exact text 'Home'.</msg>
+<status status="PASS" starttime="20210426 13:01:14.473" endtime="20210426 13:01:14.493"></status>
+</kw>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>xpath://*[contains(text(),"Add Vet")]</arg>
+</arguments>
+<msg timestamp="20210426 13:01:14.525" level="INFO">Current page contains button 'xpath://*[contains(text(),"Add Vet")]'.</msg>
+<status status="PASS" starttime="20210426 13:01:14.493" endtime="20210426 13:01:14.526"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr</arg>
+</arguments>
+<assign>
+<var>${linenumber}</var>
+</assign>
+<msg timestamp="20210426 13:01:14.538" level="INFO">${linenumber} = 8</msg>
+<status status="PASS" starttime="20210426 13:01:14.526" endtime="20210426 13:01:14.539"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${linenumber}&gt;0</arg>
+<arg>Verify Edit And Delete</arg>
+</arguments>
+<kw name="Verify Edit And Delete" library="Keywords_Vet">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr[1]/td[3]/button[1]</arg>
+</arguments>
+<msg timestamp="20210426 13:01:14.553" level="INFO">Current page contains element '//*[@id="vets"]/tbody/tr[1]/td[3]/button[1]'.</msg>
+<status status="PASS" starttime="20210426 13:01:14.541" endtime="20210426 13:01:14.553"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr[1]/td[3]/button[1]</arg>
+<arg>Edit Vet</arg>
+</arguments>
+<msg timestamp="20210426 13:01:14.554" level="INFO">Verifying element '//*[@id="vets"]/tbody/tr[1]/td[3]/button[1]' contains exact text 'Edit Vet'.</msg>
+<status status="PASS" starttime="20210426 13:01:14.554" endtime="20210426 13:01:14.576"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr[1]/td[3]/button[2]</arg>
+</arguments>
+<msg timestamp="20210426 13:01:14.589" level="INFO">Current page contains element '//*[@id="vets"]/tbody/tr[1]/td[3]/button[2]'.</msg>
+<status status="PASS" starttime="20210426 13:01:14.577" endtime="20210426 13:01:14.589"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody/tr[1]/td[3]/button[2]</arg>
+<arg>Delete Vet</arg>
+</arguments>
+<msg timestamp="20210426 13:01:14.590" level="INFO">Verifying element '//*[@id="vets"]/tbody/tr[1]/td[3]/button[2]' contains exact text 'Delete Vet'.</msg>
+<status status="PASS" starttime="20210426 13:01:14.589" endtime="20210426 13:01:14.611"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:01:14.540" endtime="20210426 13:01:14.611"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:01:14.539" endtime="20210426 13:01:14.611"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:01:14.186" endtime="20210426 13:01:14.611"></status>
+</kw>
+<kw name="Delete Pet" library="Keywords_Vet">
+<arguments>
+<arg>Donald Trump</arg>
+</arguments>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//td[contains(text(), "${name_to_delete}")]/parent::tr/td[3]/button[2]</arg>
+</arguments>
+<msg timestamp="20210426 13:01:14.613" level="INFO">Clicking button 'xpath=//td[contains(text(), "Donald Trump")]/parent::tr/td[3]/button[2]'.</msg>
+<status status="PASS" starttime="20210426 13:01:14.612" endtime="20210426 13:01:14.691"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:01:14.691" endtime="20210426 13:01:14.707"></status>
+</kw>
+<kw name="Element Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
+<arguments>
+<arg>//*[@id="vets"]/tbody</arg>
+<arg>${name_to_delete}</arg>
+</arguments>
+<msg timestamp="20210426 13:01:14.744" level="INFO">Element '//*[@id="vets"]/tbody' does not contain text 'Donald Trump'.</msg>
+<status status="PASS" starttime="20210426 13:01:14.707" endtime="20210426 13:01:14.744"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:01:14.612" endtime="20210426 13:01:14.744"></status>
+</kw>
+<kw name="End the test" library="Keywords_Vet" type="teardown">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@title="home page"]</arg>
+</arguments>
+<msg timestamp="20210426 13:01:14.746" level="INFO">Clicking link '//*[@title="home page"]'.</msg>
+<status status="PASS" starttime="20210426 13:01:14.745" endtime="20210426 13:01:14.805"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Welcome to Petclinic</arg>
+</arguments>
+<status status="PASS" starttime="20210426 13:01:14.805" endtime="20210426 13:01:14.814"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210426 13:01:14.814" endtime="20210426 13:01:16.997"></status>
+</kw>
+<status status="PASS" starttime="20210426 13:01:14.745" endtime="20210426 13:01:16.997"></status>
+</kw>
+<doc>users can delete pets by pet's name</doc>
+<tags>
+<tag>delete</tag>
+</tags>
+<status status="PASS" starttime="20210426 13:01:11.033" endtime="20210426 13:01:16.998" critical="yes"></status>
+</test>
+<doc>UI testing in PetClinic by Robot Framework
+this is to test funcitionalities of Veterinarians</doc>
+<status status="PASS" starttime="20210426 13:00:04.429" endtime="20210426 13:01:17.004"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0">Critical Tests</stat>
+<stat pass="8" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">access</stat>
+<stat pass="1" fail="0">adding</stat>
+<stat pass="1" fail="0">cancel adding</stat>
+<stat pass="1" fail="0">cancel editing</stat>
+<stat pass="1" fail="0">delete</stat>
+<stat pass="1" fail="0">edit</stat>
+<stat pass="1" fail="0">quick adding</stat>
+<stat pass="1" fail="0">veterinarians</stat>
+</tag>
+<suite>
+<stat pass="8" fail="0" id="s1" name="Veterinarians">Veterinarians</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
