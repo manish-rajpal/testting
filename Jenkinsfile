@@ -7,13 +7,15 @@ pipeline{
                             steps{
 
                                 sh 'cd spring-petclinic-rest && nohup mvn spring-boot:run &'
+				    sleep(10)
                             }
                 }
                  stage('angular'){
                               steps{
-                                    sleep(40)
+                                    
                                     sh 'cd spring-petclinic-angular/static-content && curl https://jcenter.bintray.com/com/athaydes/rawhttp/rawhttp-cli/1.0/rawhttp-cli-1.0-all.jar -o rawhttp.jar && nohup java -jar ./rawhttp.jar serve . -p 4200 &'
-                              }
+                              		sleep(10)
+			      }
                 }
 				
 				
@@ -21,7 +23,7 @@ pipeline{
 						steps {
 							script {
                     						try {
-                        						sleep(40)
+                        						sleep(10)
 									sh 'newman run  /Postman/PetClinic_05_collection.json --environment /Postman/PetClinic_05_environment.json --reporters junit'
 								}
 								catch (Exception e) {
@@ -38,7 +40,7 @@ pipeline{
 					}
 			   	stage('Robot Framework') {
                               steps {
-                                    sleep(30)
+                                    sleep(10)
                                     sh 'robot --variable BROWSER:headlesschrome -d RobotFrameWork/Results RobotFrameWork/Tests'
                               }
                               post {
