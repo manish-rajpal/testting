@@ -21,6 +21,7 @@ pipeline{
                             }
                             post { always { junit '**/*xml'   	}     }
 		}
+		}
     
 		
 	post{
@@ -43,5 +44,5 @@ pipeline{
         }
 	}
 }
-}
+
 
