@@ -19,8 +19,7 @@ pipeline{
                                     sh 'robot --variable BROWSER:headlesschrome -d RobotFrameWork/Results RobotFrameWork/Tests/**.robot'
 
                               }
-}
-                              post {
+							  post {
                                     always {
                                            script {
                                                   step(
@@ -40,8 +39,5 @@ pipeline{
                                     }
                               }
                               }
-                
-
-                
-	
-    }
+							  }
+	}  
