@@ -14,15 +14,21 @@ pipeline{
                               }
                 }
 		
-		stage('Unit Test') {
-                        steps {
-                            sh 'cd spring-petclinic-rest && mvn test'
+		stage ('Build') {
+                    steps {
+                            sh 'cd spring-petclinic-rest && mvn compile &'
+                        }
+                    }
+
+                stage('JUnit') {
+                        steps{
+                                sh 'cd spring-petclinic-rest && mvn test'
                             }
                         post {
-                            success{ gerritReview score:1}
-                            failure{ gerritReview score:-1}
+                            always {
+                                    junit '**/target/surefire-reports/**.xml'
                             }
-						}
-			}
-		}
-		
+                        }
+                }
+				}
+				}
